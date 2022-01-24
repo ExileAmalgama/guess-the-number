@@ -46,7 +46,7 @@ playButton.addEventListener('click', function() {
   const guess = Number(document.querySelector('.guess').value);
   if (!guess && guess !== 0) {
     message('No number!');
-  } else if (Number(guess < 1 || guess > 20)) {
+  } else if (guess < 1 || guess > 20) {
     message('Out of range!');
     scoreSubtract();
   } else if(guess !== secretNumber) {    
